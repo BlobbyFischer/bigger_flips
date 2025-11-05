@@ -60,9 +60,16 @@ Inside the solutions directory is where all the schemes found with `down.py` wil
 ├── 2,3,3
 │   └── x18
 │       └── 233.exp
-└── 3,3,3
-    └── x27
-        └── 333.exp
+├── 3,3,3
+│   └── x27
+│       └── 333.exp
+│   └── y23
+│       ├── k0000001b8b426de.exp
+│       ├── k0000001c70e1b0e.exp
+│       ...
+├── 4,4,4
+│   └── x64
+│       └── 444.exp
 ```
 
 Let's break down each part of this:

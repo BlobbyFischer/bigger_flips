@@ -47,7 +47,7 @@ split_distance = sys.argv[10] if len(sys.argv) > 10 else "1"
 
 
 def find_lowest_rank_dir():
-    for lowest_rank in range(256):
+    for lowest_rank in range(l*m*n):
         lowest_rank_dir = f"solutions/{l},{m},{n}/{PREFIX}{lowest_rank}"
         if os.path.isdir(lowest_rank_dir):
             return lowest_rank_dir
@@ -139,7 +139,8 @@ def flip_worker(thread_id, home_dir):
             else:
                 new_file_path.unlink(missing_ok=True) # Delete non-reduction
                 failed_attempts[0] += 1
-                print(f"\rFailed reductions ({failed_attempts[0]} / {TOTAL_NO_REDUCTION_FLIPS_THRESHOLD})           ",end='')
+                if reductions[0] == 0:
+                    print(f"\rFailed reductions ({failed_attempts[0]} / {TOTAL_NO_REDUCTION_FLIPS_THRESHOLD})           ",end='')
                 if reductions[0]==0 and failed_attempts[0]>=TOTAL_NO_REDUCTION_FLIPS_THRESHOLD:
                     stop[0] = True
 
