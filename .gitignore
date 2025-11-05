@@ -1,0 +1,9 @@
+flip
+*.exp
+*.lexp
+!222.exp
+solutions/*
+!solutions/2,3,3/x18/233.exp
+!solutions/3,3,3/x27/333.exp
+!solutions/3,3,3/y23/*
+!solutions/4,4,4/x64/444.exp
